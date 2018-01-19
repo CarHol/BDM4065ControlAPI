@@ -23,6 +23,7 @@ monitor.togglePower();
 Since the original version of this software was implemented directly into a Windows Forms class, this API version has replaced the GUI controls with a public interface, hiding the internal structure. The following methods are made public:
 
 setInputHDMI(): void            - Switches to HDMI input
+
 setInputMHL(): void             - Switches to HDMI-MHL input
 setInputDP(): void              - Switches to Displayport input
 setInputMiniDP(): void          - Switches to Mini Displayport input
