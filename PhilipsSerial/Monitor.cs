@@ -152,38 +152,50 @@ namespace PhilipsSerial
                 this.comPort.Close();
             }
         }
-
+        
+        // Sets input to HDMI
         public void setInputHDMI()
         {
             SetInputSource(InputSourceType.HDMI, InputSourceNumber.HDMI);
         }
-
+        
+        // Sets input to MHL
         public void setInputMHL()
         {
             SetInputSource(InputSourceType.HDMI, InputSourceNumber.MHLHDMI2);
         }
-
+        
+        // Returns serial number
         public string getSerialNumber()
         {
             int value = GetSerialNumber();
             return serialNumber;
         }
-
+        
+        // Sets input to VGA
         public void setInputVGA()
         {
             SetInputSource(InputSourceType.VGA, InputSourceNumber.VGA);
         }
-
+        
+        // Sets input to Displayport
         public void setinputDP()
         {
             SetInputSource(InputSourceType.DisplayPort, InputSourceNumber.DP);
         }
 
+        // Sets input to Mini Displayport
         public void setInputMiniDP()
         {
             SetInputSource(InputSourceType.DisplayPort, InputSourceNumber.miniDP);
         }
 
+        public bool isTurnedOn()
+        {
+            return powerState == PowerState.On;
+        }
+
+        // Toggles monitor sleep
         public void togglePower()
         {
             GetPowerState();
@@ -191,28 +203,34 @@ namespace PhilipsSerial
             SetPowerState(stateToSet);
         }
 
+        // Turns the monitor off
         public void setPowerOff()
         {
             SetPowerState(PowerState.Off);
         }
-
+        
+        // Turns the monitor on
         public void setPowerOn()
         {
             SetPowerState(PowerState.On);
         }
 
+        // Sets the volume
+        // TODO: Why doesn't this work?
         public void setVolume(int value)
         {
             SetVolume((byte) value);
         }
 
+        // Gets current input as string
+        // TODO: Currently returns VGA whe input is DP, why?
         public string getCurrentInput()
         {
             int value = GetCurrentSource();
             return currentSource.ToString();
         }
         
-
+        
         private byte CheckSum(byte[] msg)
         {
             byte hashValue = 0;
