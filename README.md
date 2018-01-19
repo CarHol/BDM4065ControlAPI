@@ -23,14 +23,14 @@ monitor.togglePower();
 Since the original version of this software was implemented directly into a Windows Forms class, this API version has replaced the GUI controls with a public interface, hiding the internal structure. The following methods are made public:
 
 ```
-setInputHDMI(): void            - Switches to HDMI input<br />
-setInputMHL(): void             - Switches to HDMI-MHL input<br />
-setInputDP(): void              - Switches to Displayport input<br />
-setInputMiniDP(): void          - Switches to Mini Displayport input<br />
-setInputVGA(): void             - Switches to VGA input<br />
-setPowerOn(): void              - Turns the monitor on<br />
-setPowerOff(): void             - Sets the monitor to sleep<br />
-togglePower(): void             - If the monitor is on, it's turned off, and vice versa<br />
-setVolume(value: int): void     - Sets the volume to an int value 0 - 100 (NOT YET WORKING)<br />
+setInputHDMI(): void            - Switches to HDMI input
+setInputMHL(): void             - Switches to HDMI-MHL input
+setInputDP(): void              - Switches to Displayport input
+setInputMiniDP(): void          - Switches to Mini Displayport input
+setInputVGA(): void             - Switches to VGA input
+setPowerOn(): void              - Turns the monitor on
+setPowerOff(): void             - Sets the monitor to sleep
+togglePower(): void             - If the monitor is on, it's turned off, and vice versa
+setVolume(value: int): void     - Sets the volume to an int value 0 - 100 (NOT YET WORKING)
 getCurrentInput(): string       - Returns the current input as a string
 ```
