@@ -17,7 +17,7 @@ Here's an example using the COM4 connection under Windows, instantiating the Mon
 ```
 SerialPort port = new SerialPort("COM4");
 Monitor philipsMonitor = new Monitor(port);
-monitor.togglePower();
+philipsMonitor.togglePower();
 ```
 # Interface
 Since the original version of this software was implemented directly into a Windows Forms class, this API version has replaced the GUI controls with a public interface, hiding the internal structure. The following methods are made public:
