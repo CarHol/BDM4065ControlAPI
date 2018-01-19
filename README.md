@@ -15,6 +15,7 @@ The API uses a single class, Monitor, with a single constructor which takes a Se
 
 Here's an example using the COM4 connection under Windows, instantiating the Monitor object and sending a command for toggling the nonitor on or off. You need to check and make sure which serial port your system is using, or write additional code to identify it for you. Under Linux or macOS, the serial port should be somewhere under /dev/tty*.
 ```
+// Example:
 SerialPort port = new SerialPort("COM4");
 Monitor philipsMonitor = new Monitor(port);
 philipsMonitor.togglePower();
@@ -35,3 +36,5 @@ setVolume(value: int): void     - Sets the volume to an int value 0 - 100 (NOT Y
 getCurrentInput(): string       - Returns the current input as a string
 isTurnedOn(): bool              - Returns true if the monitor is not in sleep mode
 ```
+# Work in progress
+This API still has a few things to polish. Changing the inputs and power state works as intended. The volume setter and input getter still shows irregular behavior, though. Future updates will also address the Picture-in-picture functions.
