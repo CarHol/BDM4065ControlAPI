@@ -33,4 +33,5 @@ setPowerOff(): void             - Sets the monitor to sleep
 togglePower(): void             - If the monitor is on, it's turned off, and vice versa
 setVolume(value: int): void     - Sets the volume to an int value 0 - 100 (NOT YET WORKING)
 getCurrentInput(): string       - Returns the current input as a string
+isTurnedOn(): bool              - Returns true if the monitor is not in sleep mode
 ```
