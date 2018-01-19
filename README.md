@@ -14,11 +14,11 @@ You can then include the compiled .dll in your project to add a GUI, command lin
 The API uses a single class, Monitor, with a single constructor which takes a SerialPort object as an argument. To instantiate a Monitor object you first need to define a serial port on your system, available in the System.IO.Ports namespace.
 
 Here's an example using the COM4 connection under Windows, instantiating the Monitor object and sending a command for toggling the nonitor on or off. You need to check and make sure which serial port your system is using, or write additional code to identify it for you. Under Linux or macOS, the serial port should be somewhere under /dev/tty*.
-
+```
 SerialPort port = new SerialPort("COM4");
 Monitor philipsMonitor = new Monitor(port);
 monitor.togglePower();
-
+```
 # Interface
 Since the original version of this software was implemented directly into a Windows Forms class, this API version has replaced the GUI controls with a public interface, hiding the internal structure. The following methods are made public:
 
